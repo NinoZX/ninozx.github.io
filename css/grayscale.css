@@ -404,4 +404,5 @@ body {
 
 .table>tbody, .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
   border-top: 1px solid #9A0201;
+  border-bottom: 0px solid;
 }
