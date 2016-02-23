@@ -406,3 +406,7 @@ body {
   border-top: 1px solid #9A0201;
   border-bottom: 0px solid;
 }
+
+.table-footer-data{
+    font-size: 14px;
+}
