@@ -1,0 +1,138 @@
+@media screen and (max-width: 1200px) {
+    #header .header-nav-main nav > ul > li > a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #header, #header.header-no-border-bottom .header-body, #header .container {
+        height: 100px;
+    }
+
+    .header-logo a img {
+        height: 37px;
+        margin-bottom: 13px;
+    }
+
+    #header .header-row {
+        margin-top: 0 !important;
+    }
+
+    #header .header-btn-collapse-nav {
+        background: #AB8B65;
+    }
+
+    #header .header-nav-main nav > ul > li > a.active {
+        background: none;
+        color: #AB8B65 !important;
+    }
+
+    .gallery-section {
+        padding-bottom: 30px !important;
+    }
+
+    .gallery-container {
+        padding-left: 15px !important;
+        padding-right: 20px !important;
+    }
+
+    .gallery-img {
+        padding-left: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .contact-section {
+        padding-bottom: 100px !important;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .custom-column-bg:before {
+        width: 100vw;
+        top: 20%;
+        height: 40%;
+    }
+
+    .price-list-information {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .lightbox img {
+        height: 290px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-container {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+
+    .lightbox img {
+        height: 200px;
+        width: 100%;
+    }
+
+    .gallery-img {
+        width: 100% !important;
+        padding-left: 0px !important;
+        padding-bottom: 10px !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #header, #header.header-no-border-bottom .header-body, #header .container {
+        height: 70px;
+    }
+
+    .header-logo a img {
+        height: 25px;
+        width: 62px;
+        margin-bottom: 10px;
+    }
+
+    .price-list-information div span {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .price-list-mobile-information p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card-body h3 {
+        padding-right: 0 !important;
+    }
+
+    .accordion.accordion-modern-status > .card .card-header a {
+        padding: 23px 15px;
+    }
+
+
+    .card-body {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .accordion-toggle {
+        font-size: 14px;
+    }
+
+    .price-list-mobile-information p {
+        font-size: 11px;
+    }
+}

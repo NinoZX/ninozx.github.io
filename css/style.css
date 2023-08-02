@@ -1,0 +1,185 @@
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.coffee {
+    color: #AB8B65;
+}
+
+.logo {
+    height: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    word-spacing: 5px;
+}
+
+.btn-outline.btn-primary {
+    border: 2px solid #AB8B65;
+    color: #AB8B65;
+}
+
+    .btn-outline.btn-primary:hover {
+        border-color: transparent;
+        background: #ab8b6575;
+    }
+
+#header .header-nav-main nav > ul > li > a {
+    font-size: 16px;
+}
+
+    #header .header-nav-main nav > ul > li > a:hover {
+        color: #777 !important;
+    }
+
+        #header .header-nav-main nav > ul > li > a.active {
+            color: #AB8B65 !important;
+        }
+
+        .about-us-title, .price-list-title, .contact-title {
+            color: #212529;
+        }
+
+.divider.divider-small hr {
+    background: #AB8B65;
+}
+
+.custom-column-bg:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50vw;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    background: #212529;
+    opacity: 0.6;
+    transform: translate3d(0, -50%, 0);
+    z-index: -1;
+}
+
+.reservations-text, .hours {
+    color: #fff;
+}
+
+.price-list-section {
+    background: #ab8b6512 !important;
+    padding-bottom: 150px !important;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-bottom: 2px solid #AB8B65;
+    border-bottom: 2px solid #AB8B65;
+}
+
+.table td, .table th {
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+    .table td p {
+        display: inline-block;
+        padding-left: 4px;
+        padding-right: 4px;
+        margin-bottom: 0;
+        color: #212529;
+    }
+
+.table tbody tr:hover {
+    background: #2125291f;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2125291f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #AB8B65;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+.price-list-information {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .price-list-information div span {
+        display: block;
+        font-size: 12px;
+        color: #212529;
+    }
+
+.price-list-mobile-title {
+    color: #212529;
+}
+
+.accordion.accordion-modern-status.accordion-modern-status-borders > .card {
+    border-color: #AB8B65 !important;
+}
+
+.accordion-toggle, .accordion-toggle:hover {
+    color: #212529;
+}
+
+.price-list-mobile-information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-list-mobile-information.universal {
+    justify-content: end;
+}
+
+.gallery-section {
+    padding-top: 0 !important;
+}
+
+.lightbox img {
+    width: 344px;
+    height: 345px;
+    object-fit: cover;
+}
+
+.contact-section {
+    padding-bottom: 170px !important;
+}
+
+.card {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 6px solid #AB8B65;
+}
+
+.list.list-icons.list-icons-sm li > [class*="fa-"]:first-child, .list.list-icons.list-icons-sm li > .icons:first-child, .list.list-icons.list-icons-sm li a:first-child > [class*="fa-"]:first-child, .list.list-icons.list-icons-sm li a:first-child > .icons:first-child {
+    color: #212529;
+}
+
+.contact-information {
+    color: #212529;
+}
+
+.contact-link {
+    color: #777;
+}
+
+#footer .footer-copyright p {
+    color: #fff;
+}
