@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{TITLE}} · Salon Nina</title>
+    <meta
+      name="description"
+      content="Cjenik usluga Salona Nina u Svetom Ivanu Zelini. Aktualne i bazne cijene za šišanje, bojanje, oblikovanje i njegu kose."
+    />
+    <meta name="theme-color" content="#f6f3ed" />
+    <link rel="icon" href="{{ROOT}}img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="{{ROOT}}css/salon.css?v=20261123" />
+    <link rel="stylesheet" href="{{ROOT}}css/cjenik.css?v=20261123" />
+    <script src="{{ROOT}}js/cjenik.js?v=20261123" defer></script>
+  </head>
+  <body class="price-page">
+    <a class="skip-link" href="#main">Preskočite na cjenik</a>
+    <header class="price-header wrap">
+      <a class="wordmark" href="{{ROOT}}" aria-label="Salon Nina — naslovnica"
+        ><img
+          src="{{ROOT}}img/Nina.png"
+          alt="Nina"
+          width="330"
+          height="130"
+        /><span>FRIZERSKI SALON</span></a
+      >
+      <a class="price-back" href="{{ROOT}}">← <span>Natrag na salon</span></a>
+      <a class="price-call" href="tel:+385915798154">091 579 8154 ↗</a>
+    </header>
+    <main id="main" class="wrap price-main">{{CONTENT}}</main>
+    <footer class="price-footer wrap">
+      <div>
+        <strong>Salon Nina</strong>
+        <p>Trg Ante Starčevića 5 · Sveti Ivan Zelina</p>
+      </div>
+      <a href="tel:+385915798154">Dogovorite termin · 091 579 8154 ↗</a>
+    </footer>
+  </body>
+</html>

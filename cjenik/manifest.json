@@ -1,0 +1,17 @@
+{
+  "archive_path": "arhiva/000001-866dfa17336204df/",
+  "deployment_verified": false,
+  "effective_date": "2026-09-10",
+  "filename": "97550876_ZA_SVA_PRODAJNA_MJESTA_usluge_000001_20261124_1314.csv",
+  "files_sha256": {
+    "97550876_ZA_SVA_PRODAJNA_MJESTA_usluge_000001_20261124_1314.csv": "e30ebe6dbfdd79296d998b208f7c0313c3c43515ff892b2c80529a089caba5a2",
+    "cjenik-fragment.html": "f329bfc675b633b9e2ea029b30ebb83d39c74b7136f66791f86e89be2cf976e6",
+    "cjenik.json": "866dfa17336204df08bc6fb2ac1dd582fcbed6084b649c3ed32e618d833f35b9",
+    "index.html": "cf9388d003d8c70ecf9168b99356cd3309904279e84f60f62737f29b62a222aa"
+  },
+  "publication_sequence": 1,
+  "published_at": "2026-11-24T13:14:34+01:00",
+  "schema_version": 2,
+  "sha256": "e30ebe6dbfdd79296d998b208f7c0313c3c43515ff892b2c80529a089caba5a2",
+  "status": "prepared"
+}

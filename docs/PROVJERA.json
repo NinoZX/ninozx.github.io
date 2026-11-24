@@ -1,0 +1,18 @@
+{
+  "checked_on": "2026-11-23",
+  "status": "prepared_not_deployed",
+  "source": "NeoSalon PDF: 108 stavki; CSV usporedba: 105 stavki. Korisnik je odabrao puni PDF.",
+  "source_price_pairs_match": 108,
+  "unit_tests_passed": 26,
+  "local_html_links": "pass",
+  "local_csv_endpoints_sha256": "stable, named and archive copies match manifest",
+  "browser": "Provjerena pretraga s dijakritikom i bez nje, prazan rezultat, kategorije, arhiva i poveznica s naslovnice. Širine 320 i 390 px te standardni desktop prikaz: bez vodoravnog prelijevanja stranice i cijena; bazne cijene 16 px.",
+  "live_check": "NEUSPJEH: TLS certifikat ne odgovara nazivu salon-nina.hr.",
+  "github_pages": {
+    "branch": "master",
+    "cname": "salon-nina.hr",
+    "https_enforced": false,
+    "https_certificate": null
+  },
+  "remote_changes_made": false
+}

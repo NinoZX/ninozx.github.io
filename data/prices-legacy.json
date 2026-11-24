@@ -1,0 +1,1280 @@
+{
+  "schema_version": 1,
+  "status": "legacy",
+  "currency": "EUR",
+  "effective_date": "2023-01-02",
+  "source": {
+    "repository": "https://github.com/NinoZX/ninozx.github.io",
+    "commit": "ebc1d440dcac32a4364e71beb90f2b791c553bce",
+    "path": "index.html",
+    "views": [
+      "desktop",
+      "mobile"
+    ]
+  },
+  "note": "Povijesni prijepis, nije potvrđen aktualni niti referentni cjenik. Samostalne cijene normalizirane su prema oznaci universal iz mobilnog prikaza. Neslaganja između prikaza sačuvana su za provjeru.",
+  "items": [
+    {
+      "id": "service-001-01",
+      "name": "Dječje šišanje (0-7 god.)",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 600,
+      "source_prices_cents": {
+        "desktop": 600,
+        "mobile": 600
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-002-01",
+      "name": "Muško šišanje",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 700,
+      "source_prices_cents": {
+        "desktop": 700,
+        "mobile": 700
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-003-01",
+      "name": "Muško šišanje sa mašinicom (cijela kosa)",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 500,
+      "source_prices_cents": {
+        "desktop": 500,
+        "mobile": 500
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-004-01",
+      "name": "Šišanje",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 700,
+      "source_prices_cents": {
+        "desktop": 700,
+        "mobile": 700
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-004-02",
+      "name": "Šišanje",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 800,
+      "source_prices_cents": {
+        "desktop": 800,
+        "mobile": 800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-004-03",
+      "name": "Šišanje",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 1000,
+      "source_prices_cents": {
+        "desktop": 1000,
+        "mobile": 1000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-004-04",
+      "name": "Šišanje",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 1100,
+      "source_prices_cents": {
+        "desktop": 1100,
+        "mobile": 1100
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-004-05",
+      "name": "Šišanje",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 1400,
+      "source_prices_cents": {
+        "desktop": 1400,
+        "mobile": 1400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-005-01",
+      "name": "Pranje kose",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 200,
+      "source_prices_cents": {
+        "desktop": 200,
+        "mobile": 200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-005-02",
+      "name": "Pranje kose",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 200,
+      "source_prices_cents": {
+        "desktop": 200,
+        "mobile": 200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-005-03",
+      "name": "Pranje kose",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 300,
+      "source_prices_cents": {
+        "desktop": 300,
+        "mobile": 300
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-005-04",
+      "name": "Pranje kose",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 300,
+      "source_prices_cents": {
+        "desktop": 300,
+        "mobile": 300
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-005-05",
+      "name": "Pranje kose",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 400,
+      "source_prices_cents": {
+        "desktop": 400,
+        "mobile": 400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-006-01",
+      "name": "Šišanje sa pranjem kose i frizura",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 1100,
+      "source_prices_cents": {
+        "desktop": 1100,
+        "mobile": 1100
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-006-02",
+      "name": "Šišanje sa pranjem kose i frizura",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 1200,
+      "source_prices_cents": {
+        "desktop": 1200,
+        "mobile": 1200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-006-03",
+      "name": "Šišanje sa pranjem kose i frizura",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 1500,
+      "source_prices_cents": {
+        "desktop": 1500,
+        "mobile": 1500
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-006-04",
+      "name": "Šišanje sa pranjem kose i frizura",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 1800,
+      "source_prices_cents": {
+        "desktop": 1800,
+        "mobile": 1800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-006-05",
+      "name": "Šišanje sa pranjem kose i frizura",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 2000,
+      "source_prices_cents": {
+        "desktop": 2000,
+        "mobile": 2000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-007-01",
+      "name": "Pranje i sušenje kose",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 400,
+      "source_prices_cents": {
+        "desktop": 400,
+        "mobile": 400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-007-02",
+      "name": "Pranje i sušenje kose",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 400,
+      "source_prices_cents": {
+        "desktop": 400,
+        "mobile": 400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-007-03",
+      "name": "Pranje i sušenje kose",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 500,
+      "source_prices_cents": {
+        "desktop": 500,
+        "mobile": 500
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-007-04",
+      "name": "Pranje i sušenje kose",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 600,
+      "source_prices_cents": {
+        "desktop": 600,
+        "mobile": 600
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-007-05",
+      "name": "Pranje i sušenje kose",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 800,
+      "source_prices_cents": {
+        "desktop": 800,
+        "mobile": 800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-008-01",
+      "name": "Fen frizura",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 700,
+      "source_prices_cents": {
+        "desktop": 700,
+        "mobile": 700
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-008-02",
+      "name": "Fen frizura",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 700,
+      "source_prices_cents": {
+        "desktop": 700,
+        "mobile": 700
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-008-03",
+      "name": "Fen frizura",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 1000,
+      "source_prices_cents": {
+        "desktop": 1000,
+        "mobile": 1000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-008-04",
+      "name": "Fen frizura",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 1100,
+      "source_prices_cents": {
+        "desktop": 1100,
+        "mobile": 1100
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-008-05",
+      "name": "Fen frizura",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 1200,
+      "source_prices_cents": {
+        "desktop": 1200,
+        "mobile": 1200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-009-01",
+      "name": "Svečana frizura",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 1000,
+      "source_prices_cents": {
+        "desktop": 1000,
+        "mobile": 1000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-009-02",
+      "name": "Svečana frizura",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 1200,
+      "source_prices_cents": {
+        "desktop": 1200,
+        "mobile": 1200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-009-03",
+      "name": "Svečana frizura",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 1400,
+      "source_prices_cents": {
+        "desktop": 1400,
+        "mobile": 1400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-009-04",
+      "name": "Svečana frizura",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 1800,
+      "source_prices_cents": {
+        "desktop": 1800,
+        "mobile": 1800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-009-05",
+      "name": "Svečana frizura",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 2000,
+      "source_prices_cents": {
+        "desktop": 2000,
+        "mobile": 2000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-010-01",
+      "name": "Svečana frizura podignuta",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 2000,
+      "source_prices_cents": {
+        "desktop": 2000,
+        "mobile": 2000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-010-02",
+      "name": "Svečana frizura podignuta",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 2400,
+      "source_prices_cents": {
+        "desktop": 2400,
+        "mobile": 2400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-010-03",
+      "name": "Svečana frizura podignuta",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 2600,
+      "source_prices_cents": {
+        "desktop": 2600,
+        "mobile": 2600
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-010-04",
+      "name": "Svečana frizura podignuta",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 2800,
+      "source_prices_cents": {
+        "desktop": 2800,
+        "mobile": 2800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-011-01",
+      "name": "Valovi",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 1000,
+      "source_prices_cents": {
+        "desktop": 1000,
+        "mobile": 1000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-011-02",
+      "name": "Valovi",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 1100,
+      "source_prices_cents": {
+        "desktop": 1100,
+        "mobile": 1100
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-011-03",
+      "name": "Valovi",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 1400,
+      "source_prices_cents": {
+        "desktop": 1400,
+        "mobile": 1400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-011-04",
+      "name": "Valovi",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 1600,
+      "source_prices_cents": {
+        "desktop": 1600,
+        "mobile": 1600
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-012-01",
+      "name": "Bojanje kose",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 2000,
+      "source_prices_cents": {
+        "desktop": 2000,
+        "mobile": 2000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-012-02",
+      "name": "Bojanje kose",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": null,
+      "source_prices_cents": {
+        "desktop": 2000,
+        "mobile": 2300
+      },
+      "needs_review": true
+    },
+    {
+      "id": "service-012-03",
+      "name": "Bojanje kose",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": null,
+      "source_prices_cents": {
+        "desktop": 1100,
+        "mobile": 2600
+      },
+      "needs_review": true
+    },
+    {
+      "id": "service-012-04",
+      "name": "Bojanje kose",
+      "variant": "Duga kosa",
+      "legacy_price_cents": null,
+      "source_prices_cents": {
+        "desktop": 1400,
+        "mobile": 2800
+      },
+      "needs_review": true
+    },
+    {
+      "id": "service-012-05",
+      "name": "Bojanje kose",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": null,
+      "source_prices_cents": {
+        "desktop": 1600,
+        "mobile": 3400
+      },
+      "needs_review": true
+    },
+    {
+      "id": "service-013-01",
+      "name": "Bojanje kose vlastitom bojom",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 1800,
+      "source_prices_cents": {
+        "desktop": 1800,
+        "mobile": 1800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-013-02",
+      "name": "Bojanje kose vlastitom bojom",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 1900,
+      "source_prices_cents": {
+        "desktop": 1900,
+        "mobile": 1900
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-013-03",
+      "name": "Bojanje kose vlastitom bojom",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 2000,
+      "source_prices_cents": {
+        "desktop": 2000,
+        "mobile": 2000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-013-04",
+      "name": "Bojanje kose vlastitom bojom",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 2100,
+      "source_prices_cents": {
+        "desktop": 2100,
+        "mobile": 2100
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-013-05",
+      "name": "Bojanje kose vlastitom bojom",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 2200,
+      "source_prices_cents": {
+        "desktop": 2200,
+        "mobile": 2200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-014-01",
+      "name": "Skidanje boje",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 800,
+      "source_prices_cents": {
+        "desktop": 800,
+        "mobile": 800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-014-02",
+      "name": "Skidanje boje",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 1100,
+      "source_prices_cents": {
+        "desktop": 1100,
+        "mobile": 1100
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-014-03",
+      "name": "Skidanje boje",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 1400,
+      "source_prices_cents": {
+        "desktop": 1400,
+        "mobile": 1400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-014-04",
+      "name": "Skidanje boje",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 1600,
+      "source_prices_cents": {
+        "desktop": 1600,
+        "mobile": 1600
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-014-05",
+      "name": "Skidanje boje",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 2000,
+      "source_prices_cents": {
+        "desktop": 2000,
+        "mobile": 2000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-015-01",
+      "name": "Preljev za kosu",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 1600,
+      "source_prices_cents": {
+        "desktop": 1600,
+        "mobile": 1600
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-015-02",
+      "name": "Preljev za kosu",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 1800,
+      "source_prices_cents": {
+        "desktop": 1800,
+        "mobile": 1800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-015-03",
+      "name": "Preljev za kosu",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 1900,
+      "source_prices_cents": {
+        "desktop": 1900,
+        "mobile": 1900
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-015-04",
+      "name": "Preljev za kosu",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 2000,
+      "source_prices_cents": {
+        "desktop": 2000,
+        "mobile": 2000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-015-05",
+      "name": "Preljev za kosu",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 2100,
+      "source_prices_cents": {
+        "desktop": 2100,
+        "mobile": 2100
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-016-01",
+      "name": "Pramenovi",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 2400,
+      "source_prices_cents": {
+        "desktop": 2400,
+        "mobile": 2400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-016-02",
+      "name": "Pramenovi",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 2700,
+      "source_prices_cents": {
+        "desktop": 2700,
+        "mobile": 2700
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-016-03",
+      "name": "Pramenovi",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 3200,
+      "source_prices_cents": {
+        "desktop": 3200,
+        "mobile": 3200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-016-04",
+      "name": "Pramenovi",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 3500,
+      "source_prices_cents": {
+        "desktop": 3500,
+        "mobile": 3500
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-016-05",
+      "name": "Pramenovi",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 4000,
+      "source_prices_cents": {
+        "desktop": 4000,
+        "mobile": 4000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-017-01",
+      "name": "Pramenovi (izrast)",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 1500,
+      "source_prices_cents": {
+        "desktop": 1500,
+        "mobile": 1500
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-017-02",
+      "name": "Pramenovi (izrast)",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 1900,
+      "source_prices_cents": {
+        "desktop": 1900,
+        "mobile": 1900
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-017-03",
+      "name": "Pramenovi (izrast)",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 2300,
+      "source_prices_cents": {
+        "desktop": 2300,
+        "mobile": 2300
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-017-04",
+      "name": "Pramenovi (izrast)",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 2600,
+      "source_prices_cents": {
+        "desktop": 2600,
+        "mobile": 2600
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-017-05",
+      "name": "Pramenovi (izrast)",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 3000,
+      "source_prices_cents": {
+        "desktop": 3000,
+        "mobile": 3000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-018-01",
+      "name": "Pramenovi na kapu",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 1900,
+      "source_prices_cents": {
+        "desktop": 1900,
+        "mobile": 1900
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-018-02",
+      "name": "Pramenovi na kapu",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 2200,
+      "source_prices_cents": {
+        "desktop": 2200,
+        "mobile": 2200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-018-03",
+      "name": "Pramenovi na kapu",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 2600,
+      "source_prices_cents": {
+        "desktop": 2600,
+        "mobile": 2600
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-018-04",
+      "name": "Pramenovi na kapu",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 2800,
+      "source_prices_cents": {
+        "desktop": 2800,
+        "mobile": 2800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-018-05",
+      "name": "Pramenovi na kapu",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 3500,
+      "source_prices_cents": {
+        "desktop": 3500,
+        "mobile": 3500
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-019-01",
+      "name": "Bojanje kose + pramenovi",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 2600,
+      "source_prices_cents": {
+        "desktop": 2600,
+        "mobile": 2600
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-019-02",
+      "name": "Bojanje kose + pramenovi",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 2800,
+      "source_prices_cents": {
+        "desktop": 2800,
+        "mobile": 2800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-019-03",
+      "name": "Bojanje kose + pramenovi",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 3400,
+      "source_prices_cents": {
+        "desktop": 3400,
+        "mobile": 3400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-019-04",
+      "name": "Bojanje kose + pramenovi",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 3800,
+      "source_prices_cents": {
+        "desktop": 3800,
+        "mobile": 3800
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-019-05",
+      "name": "Bojanje kose + pramenovi",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 5000,
+      "source_prices_cents": {
+        "desktop": 5000,
+        "mobile": 5000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-020-01",
+      "name": "Ombre",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 1900,
+      "source_prices_cents": {
+        "desktop": 1900,
+        "mobile": 1900
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-020-02",
+      "name": "Ombre",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 2500,
+      "source_prices_cents": {
+        "desktop": 2500,
+        "mobile": 2500
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-020-03",
+      "name": "Ombre",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 3000,
+      "source_prices_cents": {
+        "desktop": 3000,
+        "mobile": 3000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-020-04",
+      "name": "Ombre",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 3400,
+      "source_prices_cents": {
+        "desktop": 3400,
+        "mobile": 3400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-020-05",
+      "name": "Ombre",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 4000,
+      "source_prices_cents": {
+        "desktop": 4000,
+        "mobile": 4000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-021-01",
+      "name": "Balayage",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 2500,
+      "source_prices_cents": {
+        "desktop": 2500,
+        "mobile": 2500
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-021-02",
+      "name": "Balayage",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 2700,
+      "source_prices_cents": {
+        "desktop": 2700,
+        "mobile": 2700
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-021-03",
+      "name": "Balayage",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 3400,
+      "source_prices_cents": {
+        "desktop": 3400,
+        "mobile": 3400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-021-04",
+      "name": "Balayage",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 4000,
+      "source_prices_cents": {
+        "desktop": 4000,
+        "mobile": 4000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-021-05",
+      "name": "Balayage",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 5000,
+      "source_prices_cents": {
+        "desktop": 5000,
+        "mobile": 5000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-022-01",
+      "name": "Minival",
+      "variant": "Ekstra kratka kosa",
+      "legacy_price_cents": 2000,
+      "source_prices_cents": {
+        "desktop": 2000,
+        "mobile": 2000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-022-02",
+      "name": "Minival",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 2200,
+      "source_prices_cents": {
+        "desktop": 2200,
+        "mobile": 2200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-022-03",
+      "name": "Minival",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 3000,
+      "source_prices_cents": {
+        "desktop": 3000,
+        "mobile": 3000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-022-04",
+      "name": "Minival",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 3200,
+      "source_prices_cents": {
+        "desktop": 3200,
+        "mobile": 3200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-022-05",
+      "name": "Minival",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 4000,
+      "source_prices_cents": {
+        "desktop": 4000,
+        "mobile": 4000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-023-01",
+      "name": "Cocochoco tretman",
+      "variant": "Kratka kosa",
+      "legacy_price_cents": 6700,
+      "source_prices_cents": {
+        "desktop": 6700,
+        "mobile": 6700
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-023-02",
+      "name": "Cocochoco tretman",
+      "variant": "Poluduga kosa",
+      "legacy_price_cents": 8000,
+      "source_prices_cents": {
+        "desktop": 8000,
+        "mobile": 8000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-023-03",
+      "name": "Cocochoco tretman",
+      "variant": "Duga kosa",
+      "legacy_price_cents": 9400,
+      "source_prices_cents": {
+        "desktop": 9400,
+        "mobile": 9400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-023-04",
+      "name": "Cocochoco tretman",
+      "variant": "Ekstra duga kosa",
+      "legacy_price_cents": 12000,
+      "source_prices_cents": {
+        "desktop": 12000,
+        "mobile": 12000
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-024-01",
+      "name": "Uporaba figara ili pegle 10min",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 300,
+      "source_prices_cents": {
+        "desktop": 300,
+        "mobile": 300
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-025-01",
+      "name": "Bojanje obrva",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 200,
+      "source_prices_cents": {
+        "desktop": 200,
+        "mobile": 200
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-026-01",
+      "name": "Pletenica 1 kom",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 300,
+      "source_prices_cents": {
+        "desktop": 300,
+        "mobile": 300
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-027-01",
+      "name": "Rezanje šiški",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 300,
+      "source_prices_cents": {
+        "desktop": 300,
+        "mobile": 300
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-028-01",
+      "name": "Brijanje",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 700,
+      "source_prices_cents": {
+        "desktop": 700,
+        "mobile": 700
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-029-01",
+      "name": "Skidanje brade sa mašinicom",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 300,
+      "source_prices_cents": {
+        "desktop": 300,
+        "mobile": 300
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-030-01",
+      "name": "Poklon bon",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 1400,
+      "source_prices_cents": {
+        "desktop": 1400,
+        "mobile": 1400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-031-01",
+      "name": "Keratinski tretman",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 1400,
+      "source_prices_cents": {
+        "desktop": 1400,
+        "mobile": 1400
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-032-01",
+      "name": "Bojanje jedan pramen (folija)",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 300,
+      "source_prices_cents": {
+        "desktop": 300,
+        "mobile": 300
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-033-01",
+      "name": "Uređivanje brade",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 700,
+      "source_prices_cents": {
+        "desktop": 700,
+        "mobile": 700
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-034-01",
+      "name": "Loreal steampod pegla",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 700,
+      "source_prices_cents": {
+        "desktop": 700,
+        "mobile": 700
+      },
+      "needs_review": false
+    },
+    {
+      "id": "service-035-01",
+      "name": "Preljev 10 g",
+      "variant": "Jedinstvena cijena",
+      "legacy_price_cents": 300,
+      "source_prices_cents": {
+        "desktop": 300,
+        "mobile": 300
+      },
+      "needs_review": false
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "service-012-02",
+      "name": "Bojanje kose",
+      "variant": "Kratka kosa",
+      "desktop_cents": 2000,
+      "mobile_cents": 2300
+    },
+    {
+      "id": "service-012-03",
+      "name": "Bojanje kose",
+      "variant": "Poluduga kosa",
+      "desktop_cents": 1100,
+      "mobile_cents": 2600
+    },
+    {
+      "id": "service-012-04",
+      "name": "Bojanje kose",
+      "variant": "Duga kosa",
+      "desktop_cents": 1400,
+      "mobile_cents": 2800
+    },
+    {
+      "id": "service-012-05",
+      "name": "Bojanje kose",
+      "variant": "Ekstra duga kosa",
+      "desktop_cents": 1600,
+      "mobile_cents": 3400
+    }
+  ]
+}

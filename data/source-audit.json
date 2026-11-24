@@ -1,0 +1,608 @@
+{
+  "audit_version": 1,
+  "sources": {
+    "csv": {
+      "filename": "cjenik-usluge-20261117-1404.csv",
+      "sha256": "d2f9a1e5ad3db7d0d91874d11525ea8fa97a7ff9cbe6427af2bf328bbb368346"
+    },
+    "pdf": {
+      "filename": "neo962007_izlistaj_cjenik.pdf",
+      "sha256": "1594a1686623fe24c95e40283d8f34a68a3216efd59d8be0ef9c2140317b2f45"
+    },
+    "reviewed_pdf_rows": {
+      "filename": "pdf-rows.json",
+      "sha256": "9fa3a6313e067418264cbb0ed33e67c4d8b9a32579c324b50199a3eb2858c880"
+    }
+  },
+  "canonical_source": "pdf",
+  "reference_date": "2026-09-10",
+  "effective_date": "2026-09-10",
+  "effective_date_source": "Korisnik je u razgovoru 2026-11-23 potvrdio datum primjene.",
+  "source_choice": "Korisnik je odabrao puni PDF, uključujući tri stavke kojih nema u CSV-u.",
+  "comparison": {
+    "pdf_item_count": 108,
+    "csv_item_count": 105,
+    "matched_item_count": 105,
+    "price_mismatches": [],
+    "csv_only": [],
+    "pdf_only": [
+      {
+        "name": "PLETENICA 1KOM",
+        "reference_cents": 300,
+        "current_cents": 300,
+        "page": 4
+      },
+      {
+        "name": "REZANJE SISKI",
+        "reference_cents": 300,
+        "current_cents": 300,
+        "page": 4
+      },
+      {
+        "name": "POKLON BON",
+        "reference_cents": 1400,
+        "current_cents": 1400,
+        "page": 4
+      }
+    ],
+    "name_differences": [
+      {
+        "pdf": "PRANJE I SUSENJE EKSTRA KRATKA",
+        "csv": "PRANJE  I SUSENJE EKSTRA KRATKA"
+      },
+      {
+        "pdf": "PRANJE I SUSENJE KRATKA",
+        "csv": "PRANJE  I SUSENJE KRATKA"
+      },
+      {
+        "pdf": "PRANJE I SUSENJE POLUDUGA",
+        "csv": "PRANJE  I SUSENJE POLUDUGA"
+      },
+      {
+        "pdf": "PRANJE I SUSENJE DUGA",
+        "csv": "PRANJE  I SUSENJE DUGA"
+      },
+      {
+        "pdf": "PRANJE I SUSENJE EKSTRA DUGA",
+        "csv": "PRANJE  I SUSENJE EKSTRA DUGA"
+      },
+      {
+        "pdf": "BOJANJE KOSE PRAMENOVI EKSTRA KRATKA",
+        "csv": "BOJANJE KOSE + PRAMENOVI EKSTRA KRATKA"
+      },
+      {
+        "pdf": "BOJANJE KOSE PRAMENOVI KRATKA",
+        "csv": "BOJANJE KOSE + PRAMENOVI KRATKA"
+      },
+      {
+        "pdf": "BOJANJE KOSE PRAMENOVI POLUDUGA",
+        "csv": "BOJANJE KOSE + PRAMENOVI POLUDUGA"
+      },
+      {
+        "pdf": "BOJANJE KOSE PRAMENOVI DUGA",
+        "csv": "BOJANJE KOSE + PRAMENOVI DUGA"
+      },
+      {
+        "pdf": "BOJANJE KOSE PRAMENOVI EKSTRA DUGA",
+        "csv": "BOJANJE KOSE + PRAMENOVI EKSTRA DUGA"
+      },
+      {
+        "pdf": "PRANJE, ŠIŠANJE FRIZURA EKSTRA DUGA",
+        "csv": "PRANJE, ŠIŠANJE  FRIZURA EKSTRA DUGA"
+      }
+    ]
+  },
+  "csv_recovery": {
+    "header": "Poznato zaglavlje bilo je zapisano kao jedno dodatno navodnicima omotano polje.",
+    "data": "Razdvajanje zadnja četiri zareza; stroga provjera iznosa i praznih promotivnih polja.",
+    "names_with_unquoted_commas": 10
+  },
+  "display_name_changes": [
+    {
+      "id": "service001",
+      "source_name": "ŠIŠANJE EKSTRA KRATKA KOSA",
+      "display_name": "Šišanje ekstra kratka kosa"
+    },
+    {
+      "id": "service002",
+      "source_name": "ŠIŠANJE KRATKA KOSA",
+      "display_name": "Šišanje kratka kosa"
+    },
+    {
+      "id": "service003",
+      "source_name": "ŠIŠANJE POLUDUGA KOSA",
+      "display_name": "Šišanje poluduga kosa"
+    },
+    {
+      "id": "service004",
+      "source_name": "ŠIŠANJE DUGA KOSA",
+      "display_name": "Šišanje duga kosa"
+    },
+    {
+      "id": "service005",
+      "source_name": "ŠIŠANJE EKSTRA DUGA KOSA",
+      "display_name": "Šišanje ekstra duga kosa"
+    },
+    {
+      "id": "service006",
+      "source_name": "PRANJE KOSE EKSTRA KRATKA",
+      "display_name": "Pranje kose ekstra kratka"
+    },
+    {
+      "id": "service007",
+      "source_name": "PRANJE KOSE KRATKA",
+      "display_name": "Pranje kose kratka"
+    },
+    {
+      "id": "service008",
+      "source_name": "PRANJE KOSE POLUDUGA",
+      "display_name": "Pranje kose poluduga"
+    },
+    {
+      "id": "service009",
+      "source_name": "PRANJE KOSE DUGA",
+      "display_name": "Pranje kose duga"
+    },
+    {
+      "id": "service010",
+      "source_name": "PRANJE KOSE EKSTRA DUGA",
+      "display_name": "Pranje kose ekstra duga"
+    },
+    {
+      "id": "service011",
+      "source_name": "PRANJE I SUSENJE EKSTRA KRATKA",
+      "display_name": "Pranje i sušenje ekstra kratka"
+    },
+    {
+      "id": "service012",
+      "source_name": "PRANJE I SUSENJE KRATKA",
+      "display_name": "Pranje i sušenje kratka"
+    },
+    {
+      "id": "service013",
+      "source_name": "PRANJE I SUSENJE POLUDUGA",
+      "display_name": "Pranje i sušenje poluduga"
+    },
+    {
+      "id": "service014",
+      "source_name": "PRANJE I SUSENJE DUGA",
+      "display_name": "Pranje i sušenje duga"
+    },
+    {
+      "id": "service015",
+      "source_name": "PRANJE I SUSENJE EKSTRA DUGA",
+      "display_name": "Pranje i sušenje ekstra duga"
+    },
+    {
+      "id": "service016",
+      "source_name": "FEN FRIZURA EKSTRA KRATKA",
+      "display_name": "Fen frizura ekstra kratka"
+    },
+    {
+      "id": "service017",
+      "source_name": "FEN FRIZURA KRATKA",
+      "display_name": "Fen frizura kratka"
+    },
+    {
+      "id": "service018",
+      "source_name": "FEN FRIZURA POLUDUGA",
+      "display_name": "Fen frizura poluduga"
+    },
+    {
+      "id": "service019",
+      "source_name": "FEN FRIZURA DUGA",
+      "display_name": "Fen frizura duga"
+    },
+    {
+      "id": "service020",
+      "source_name": "FEN FRIZURA EKSTRA DUGA",
+      "display_name": "Fen frizura ekstra duga"
+    },
+    {
+      "id": "service021",
+      "source_name": "SVECANA FRIZURA EKSTRA KRATKA",
+      "display_name": "Svečana frizura ekstra kratka"
+    },
+    {
+      "id": "service022",
+      "source_name": "SVECANA FRIZURA KRATKA",
+      "display_name": "Svečana frizura kratka"
+    },
+    {
+      "id": "service023",
+      "source_name": "SVECANA FRIZURA POLUDUGA",
+      "display_name": "Svečana frizura poluduga"
+    },
+    {
+      "id": "service024",
+      "source_name": "SVECANA FRIZURA DUGA",
+      "display_name": "Svečana frizura duga"
+    },
+    {
+      "id": "service025",
+      "source_name": "SVECANA FRIZURA EKSTRA DUGA",
+      "display_name": "Svečana frizura ekstra duga"
+    },
+    {
+      "id": "service026",
+      "source_name": "BOJANJE KOSE EKSTRA KRATKA",
+      "display_name": "Bojanje kose ekstra kratka"
+    },
+    {
+      "id": "service027",
+      "source_name": "BOJANJE KOSE KRATKA",
+      "display_name": "Bojanje kose kratka"
+    },
+    {
+      "id": "service028",
+      "source_name": "BOJANJE KOSE POLUDUGA",
+      "display_name": "Bojanje kose poluduga"
+    },
+    {
+      "id": "service029",
+      "source_name": "BOJANJE KOSE DUGA",
+      "display_name": "Bojanje kose duga"
+    },
+    {
+      "id": "service030",
+      "source_name": "BOJANJE KOSE EKSTRA DUGA",
+      "display_name": "Bojanje kose ekstra duga"
+    },
+    {
+      "id": "service031",
+      "source_name": "BOJANJE KOSE VLASTITOM BOJOM EKSTRA KRATKA",
+      "display_name": "Bojanje kose vlastitom bojom ekstra kratka"
+    },
+    {
+      "id": "service032",
+      "source_name": "BOJANJE KOSE VLASTITOM BOJOM KRATKA",
+      "display_name": "Bojanje kose vlastitom bojom kratka"
+    },
+    {
+      "id": "service033",
+      "source_name": "BOJANJE KOSE VLASTITOM BOJOM POLUDUGA",
+      "display_name": "Bojanje kose vlastitom bojom poluduga"
+    },
+    {
+      "id": "service034",
+      "source_name": "BOJANJE KOSE VLASTITOM BOJOM DUGA",
+      "display_name": "Bojanje kose vlastitom bojom duga"
+    },
+    {
+      "id": "service035",
+      "source_name": "BOJANJE KOSE VLASTITOM BOJOM EKSTRA DUGA",
+      "display_name": "Bojanje kose vlastitom bojom ekstra duga"
+    },
+    {
+      "id": "service036",
+      "source_name": "SKIDANJE BOJE EKSTRA KRATKA",
+      "display_name": "Skidanje boje ekstra kratka"
+    },
+    {
+      "id": "service037",
+      "source_name": "SKIDANJE BOJE KRATKA",
+      "display_name": "Skidanje boje kratka"
+    },
+    {
+      "id": "service038",
+      "source_name": "SKIDANJE BOJE POLUDUGA",
+      "display_name": "Skidanje boje poluduga"
+    },
+    {
+      "id": "service039",
+      "source_name": "SKIDANJE BOJE DUGA",
+      "display_name": "Skidanje boje duga"
+    },
+    {
+      "id": "service040",
+      "source_name": "SKIDANJE BOJE EKSTRA DUGA",
+      "display_name": "Skidanje boje ekstra duga"
+    },
+    {
+      "id": "service041",
+      "source_name": "PRAMENOVI EKSTRA KRATKA",
+      "display_name": "Pramenovi ekstra kratka"
+    },
+    {
+      "id": "service042",
+      "source_name": "PRAMENOVI KRATKA",
+      "display_name": "Pramenovi kratka"
+    },
+    {
+      "id": "service043",
+      "source_name": "PRAMENOVI POLUDUGA",
+      "display_name": "Pramenovi poluduga"
+    },
+    {
+      "id": "service044",
+      "source_name": "PRAMENOVI DUGA",
+      "display_name": "Pramenovi duga"
+    },
+    {
+      "id": "service045",
+      "source_name": "PRAMENOVI EKSTRA DUGA",
+      "display_name": "Pramenovi ekstra duga"
+    },
+    {
+      "id": "service046",
+      "source_name": "PRAMENOVI IZRAST EKSTRA KRATKA",
+      "display_name": "Pramenovi izrast ekstra kratka"
+    },
+    {
+      "id": "service047",
+      "source_name": "PRAMENOVI IZRAST KRATKA",
+      "display_name": "Pramenovi izrast kratka"
+    },
+    {
+      "id": "service048",
+      "source_name": "PRAMENOVI IZRAST POLUDUGA",
+      "display_name": "Pramenovi izrast poluduga"
+    },
+    {
+      "id": "service049",
+      "source_name": "PRAMENOVI IZRAST DUGA",
+      "display_name": "Pramenovi izrast duga"
+    },
+    {
+      "id": "service050",
+      "source_name": "PRAMENOVI IZRAST EKSTRA DUGA",
+      "display_name": "Pramenovi izrast ekstra duga"
+    },
+    {
+      "id": "service051",
+      "source_name": "BOJANJE KOSE PRAMENOVI EKSTRA KRATKA",
+      "display_name": "Bojanje kose + pramenovi ekstra kratka"
+    },
+    {
+      "id": "service052",
+      "source_name": "BOJANJE KOSE PRAMENOVI KRATKA",
+      "display_name": "Bojanje kose + pramenovi kratka"
+    },
+    {
+      "id": "service053",
+      "source_name": "BOJANJE KOSE PRAMENOVI POLUDUGA",
+      "display_name": "Bojanje kose + pramenovi poluduga"
+    },
+    {
+      "id": "service054",
+      "source_name": "BOJANJE KOSE PRAMENOVI DUGA",
+      "display_name": "Bojanje kose + pramenovi duga"
+    },
+    {
+      "id": "service055",
+      "source_name": "BOJANJE KOSE PRAMENOVI EKSTRA DUGA",
+      "display_name": "Bojanje kose + pramenovi ekstra duga"
+    },
+    {
+      "id": "service056",
+      "source_name": "OMBRE EKSTRA KRATKA",
+      "display_name": "Ombre ekstra kratka"
+    },
+    {
+      "id": "service057",
+      "source_name": "OMBRE KRATKA",
+      "display_name": "Ombre kratka"
+    },
+    {
+      "id": "service058",
+      "source_name": "OMBRE POLUDUGA",
+      "display_name": "Ombre poluduga"
+    },
+    {
+      "id": "service059",
+      "source_name": "OMBRE DUGA",
+      "display_name": "Ombre duga"
+    },
+    {
+      "id": "service060",
+      "source_name": "OMBRE EKSTRA DUGA",
+      "display_name": "Ombre ekstra duga"
+    },
+    {
+      "id": "service061",
+      "source_name": "BALAYAGE EKSTRA KRATKA",
+      "display_name": "Balayage ekstra kratka"
+    },
+    {
+      "id": "service062",
+      "source_name": "BALAYAGE KRATKA",
+      "display_name": "Balayage kratka"
+    },
+    {
+      "id": "service063",
+      "source_name": "BALAYAGE POLUDUGA",
+      "display_name": "Balayage poluduga"
+    },
+    {
+      "id": "service064",
+      "source_name": "BALAYAGE DUGA",
+      "display_name": "Balayage duga"
+    },
+    {
+      "id": "service065",
+      "source_name": "BALAYAGE EKSTRA DUGA",
+      "display_name": "Balayage ekstra duga"
+    },
+    {
+      "id": "service066",
+      "source_name": "MINIVAL EKSTRA KRATKA",
+      "display_name": "Minival ekstra kratka"
+    },
+    {
+      "id": "service067",
+      "source_name": "MINIVAL KRATKA",
+      "display_name": "Minival kratka"
+    },
+    {
+      "id": "service068",
+      "source_name": "MINIVAL POLUDUGA",
+      "display_name": "Minival poluduga"
+    },
+    {
+      "id": "service069",
+      "source_name": "MINIVAL DUGA",
+      "display_name": "Minival duga"
+    },
+    {
+      "id": "service070",
+      "source_name": "BOJANJE OBRVA",
+      "display_name": "Bojanje obrva"
+    },
+    {
+      "id": "service071",
+      "source_name": "PLETENICA 1KOM",
+      "display_name": "Pletenica 1 kom"
+    },
+    {
+      "id": "service072",
+      "source_name": "REZANJE SISKI",
+      "display_name": "Rezanje šiški"
+    },
+    {
+      "id": "service073",
+      "source_name": "POKLON BON",
+      "display_name": "Poklon bon"
+    },
+    {
+      "id": "service079",
+      "source_name": "DJEČJE ŠIŠANJE",
+      "display_name": "Dječje šišanje"
+    },
+    {
+      "id": "service080",
+      "source_name": "MUSKO SISANJE",
+      "display_name": "Muško šišanje"
+    },
+    {
+      "id": "service081",
+      "source_name": "MUSKO SISANJE SA MASINICOM",
+      "display_name": "Muško šišanje sa mašinicom"
+    },
+    {
+      "id": "service082",
+      "source_name": "Skidanje brade sa masinicom",
+      "display_name": "Skidanje brade sa mašinicom"
+    },
+    {
+      "id": "service083",
+      "source_name": "UREDIVANJE BRADE",
+      "display_name": "Uređivanje brade"
+    },
+    {
+      "id": "service084",
+      "source_name": "MODERNO MUSKO ŠIŠANJE",
+      "display_name": "Moderno muško šišanje"
+    },
+    {
+      "id": "service086",
+      "source_name": "KERATINSKI TRETMAN",
+      "display_name": "Keratinski tretman"
+    },
+    {
+      "id": "service087",
+      "source_name": "BOJANJE JEDAN PRAMEN(FOLIJA)",
+      "display_name": "Bojanje jedan pramen (folija)"
+    },
+    {
+      "id": "service088",
+      "source_name": "Loreal steampod pegla",
+      "display_name": "L’Oréal SteamPod pegla"
+    },
+    {
+      "id": "service093",
+      "source_name": "SVECANA FRIZURA PODIGNUTA KRATKA KOSA",
+      "display_name": "Svečana frizura podignuta kratka kosa"
+    },
+    {
+      "id": "service094",
+      "source_name": "SVECANA FRIZURA PODIGNUTA POLUDUGA KOSA",
+      "display_name": "Svečana frizura podignuta poluduga kosa"
+    },
+    {
+      "id": "service095",
+      "source_name": "SVECANA FRIZURA PODIGNUTA DUGA KOSA",
+      "display_name": "Svečana frizura podignuta duga kosa"
+    },
+    {
+      "id": "service096",
+      "source_name": "SVECANA FRIZURA PODIGNUTA EKSTRA DUGA",
+      "display_name": "Svečana frizura podignuta ekstra duga"
+    },
+    {
+      "id": "service097",
+      "source_name": "PRELJEV 10 G",
+      "display_name": "Preljev 10 g"
+    },
+    {
+      "id": "service099",
+      "source_name": "BOJANJE,ŠIŠANJE FRIZURA EKSTRA KRATKA",
+      "display_name": "Bojanje, šišanje frizura ekstra kratka"
+    },
+    {
+      "id": "service100",
+      "source_name": "BOJANJE,ŠIŠANJE FRIZURA KRATKA",
+      "display_name": "Bojanje, šišanje frizura kratka"
+    },
+    {
+      "id": "service101",
+      "source_name": "BOJANJE, ŠIŠANJE FRIZURA POLUDUGA",
+      "display_name": "Bojanje, šišanje frizura poluduga"
+    },
+    {
+      "id": "service102",
+      "source_name": "BOJANJE, ŠIŠANJE FRIZURA DUGA",
+      "display_name": "Bojanje, šišanje frizura duga"
+    },
+    {
+      "id": "service103",
+      "source_name": "BOJANJE, ŠIŠANJE FRIZURA EKSTA DUGA",
+      "display_name": "Bojanje, šišanje frizura ekstra duga"
+    },
+    {
+      "id": "service104",
+      "source_name": "PANJE,ŠIŠANJE FRIZURA EKSTRA KRATKA",
+      "display_name": "Pranje, šišanje frizura ekstra kratka"
+    },
+    {
+      "id": "service105",
+      "source_name": "PRANJE,ŠIŠANJE FRIZURA KRATKA",
+      "display_name": "Pranje, šišanje frizura kratka"
+    },
+    {
+      "id": "service106",
+      "source_name": "PRANJE,ŠIŠANJE FRIZURA POLUDUGA",
+      "display_name": "Pranje, šišanje frizura poluduga"
+    },
+    {
+      "id": "service107",
+      "source_name": "PRANJE, ŠIŠANJE FRIZURA DUGA",
+      "display_name": "Pranje, šišanje frizura duga"
+    },
+    {
+      "id": "service108",
+      "source_name": "PRANJE, ŠIŠANJE FRIZURA EKSTRA DUGA",
+      "display_name": "Pranje, šišanje frizura ekstra duga"
+    }
+  ],
+  "amounts_changed": false,
+  "pending": [
+    "Mrežna objava i provjera javne HTTPS adrese još nisu izvršene."
+  ],
+  "business_verification": {
+    "checked_on": "2026-11-23",
+    "identifier": "97550876",
+    "identifier_type": "mbo",
+    "source": "https://www.companywall.hr/tvrtka/frizerski-salon-nina--vl-nikolina-brlecic-bukal--sv-ivan-zelina--trg-ante-starcevica-5/MMCbleiY",
+    "source_type": "secondary",
+    "matched": [
+      "registered name",
+      "owner name",
+      "address",
+      "phone"
+    ],
+    "primary_registry_status": "Request Rejected — primarni izvadak nije preuzet",
+    "outlet_scope": "all",
+    "scope_reason": "Jedan javno poznat salon na adresi Trg Ante Starčevića 5; isti cjenik za sva prodajna mjesta prema čl. 6. st. 4. NN 132/2026-1584."
+  },
+  "confirmation_status": "confirmed_source_and_effective_date"
+}
