@@ -1,4 +1,4 @@
-# Obnova weba — ažurirano 23. 11. 2026.
+# Obnova weba — ažurirano 24. 11. 2026.
 
 ## Sadržaj i izgled
 
@@ -34,8 +34,10 @@ Naslovnica vodi na `/cjenik/`, preuzimanje CSV-a i arhivu. Svaka usluga ima aktu
 - Sitni naglašeni tekst potamnjen je radi kontrasta; podržano je smanjeno kretanje i vidljiv fokus.
 - Bez JavaScripta izbornik je vidljiv, detalji rade, a fotografije se otvaraju izvornim poveznicama. Mobilno zaglavlje tada nije ljepljivo.
 
-## Za dovršetak
+## Objava i daljnje provjere
 
-1. Ispraviti DNS/HTTPS prema [DNS.md](DNS.md).
-2. Objaviti pripremljenu granu na GitHub Pages izvoru `master` i provjeriti javni HTML, CSV i arhivu.
-3. Pri budućoj izmjeni cijena uvesti novi izvoz, potvrditi promjene i objaviti ih do roka iz [CJENIK.md](CJENIK.md); stara izdanja ne brisati.
+Obnovljeni web i cjenik objavljeni su 24.11.2026. na GitHub Pagesu iz grane `master`. Cloudflare DNS je aktivan, delegacija spremljena, certifikat za glavnu domenu i `www` izdan te Enforce HTTPS uključen. Završna mrežna provjera preko uobičajenog sistemskog resolvera prošla je za tri CSV kopije, 108 parova cijena, arhivu i naslovnicu uz normalnu TLS provjeru, bez DNS zamjena. Sve kombinacije HTTP/HTTPS i glavne domene/`www` završavaju na HTTPS glavne domene uz HTTP 200.
+
+Naslovnica se uspješno otvorila u pregledniku bez zaobilaženja upozorenja. Nema preostalih blokera za objavu; detalji provjere su u [DNS.md](DNS.md) i [PROVJERA.json](PROVJERA.json).
+
+Pri budućoj izmjeni cijena uvesti novi izvoz, potvrditi promjene i objaviti ih do roka iz [CJENIK.md](CJENIK.md); stara izdanja ne brisati.

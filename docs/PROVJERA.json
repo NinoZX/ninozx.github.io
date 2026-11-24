@@ -1,18 +1,86 @@
 {
-  "checked_on": "2026-11-23",
-  "status": "prepared_not_deployed",
+  "checked_on": "2026-11-24",
+  "status": "deployed_https_verified",
   "source": "NeoSalon PDF: 108 stavki; CSV usporedba: 105 stavki. Korisnik je odabrao puni PDF.",
   "source_price_pairs_match": 108,
   "unit_tests_passed": 26,
   "local_html_links": "pass",
   "local_csv_endpoints_sha256": "stable, named and archive copies match manifest",
   "browser": "Provjerena pretraga s dijakritikom i bez nje, prazan rezultat, kategorije, arhiva i poveznica s naslovnice. Širine 320 i 390 px te standardni desktop prikaz: bez vodoravnog prelijevanja stranice i cijena; bazne cijene 16 px.",
-  "live_check": "NEUSPJEH: TLS certifikat ne odgovara nazivu salon-nina.hr.",
+  "live_check": "PASS preko uobičajenog sistemskog resolvera bez DNS zamjena, uz normalnu provjeru certifikata i naziva domene.",
   "github_pages": {
     "branch": "master",
+    "status": "built",
     "cname": "salon-nina.hr",
-    "https_enforced": false,
-    "https_certificate": null
+    "html_url": "https://salon-nina.hr/",
+    "https_enforced": true,
+    "https_certificate": {
+      "state": "approved",
+      "description": "The certificate has been approved.",
+      "domains": [
+        "salon-nina.hr",
+        "www.salon-nina.hr"
+      ],
+      "expires_at": "2027-02-22"
+    }
   },
-  "remote_changes_made": false
+  "remote_changes_made": true,
+  "checked_at": "2026-11-24T13:14:41.426058+00:00",
+  "live_csv_endpoints_sha256": "stable, named and archive copies match local manifest",
+  "live_html_price_pairs_match": 108,
+  "live_archive_and_home_links": "pass",
+  "reviewed_head": "2519ea7e2b5e60e77dc6b3a4deda62fbbd9adffc",
+  "dns": {
+    "provider": "Cloudflare",
+    "zone_status": "Active",
+    "nameservers": [
+      "chris.ns.cloudflare.com",
+      "hera.ns.cloudflare.com"
+    ],
+    "registrar_saved": true,
+    "parent_hr_delegation_verified": true,
+    "google_public_dns_delegation_verified": true,
+    "dns_only_records": 11,
+    "ttl_seconds": 300,
+    "public_a_records": [
+      "185.199.108.153",
+      "185.199.109.153",
+      "185.199.110.153",
+      "185.199.111.153"
+    ],
+    "domain_renewed_until": "2027-11-24"
+  },
+  "tls": {
+    "certificate_and_hostname_verification_disabled": false,
+    "new_github_addresses_checked": 4,
+    "new_github_addresses_http_status": 200,
+    "public_dns_verifier": {
+      "passed": true,
+      "resolver": "1.1.1.1",
+      "tls_hostname": "salon-nina.hr"
+    },
+    "system_resolver_verifier": {
+      "passed": true,
+      "checked_at": "2026-11-24T13:14:40.079332+00:00",
+      "resolution": "Unmodified default system resolver; no address overrides",
+      "dns_override": false,
+      "certificate_and_hostname_verification_disabled": false
+    }
+  },
+  "redirects": {
+    "all_four_entry_urls_final": "https://salon-nina.hr/",
+    "final_http_status": 200,
+    "http_www_chain": [
+      "http://www.salon-nina.hr/",
+      "http://salon-nina.hr/",
+      "https://salon-nina.hr/"
+    ],
+    "https_to_http_downgrade": false,
+    "system_resolver_passed": true,
+    "ssl_verify_result": 0
+  },
+  "evidence_file": "salon-nina-https-provjera-2026-11-24.json (lokalni outputs, izvan repozitorija)",
+  "pending": [],
+  "local_dns_cache_pending": false,
+  "browser_https_home": "Uspješno otvorena naslovnica 24.11.2026. bez zaobilaženja upozorenja."
 }
