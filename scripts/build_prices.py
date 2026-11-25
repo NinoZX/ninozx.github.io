@@ -17,6 +17,8 @@ import unicodedata
 from zoneinfo import ZoneInfo
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SITE_URL = "https://salon-nina.hr"
+SERVICE_PATH = "/usluge/balayage-i-pramenovi/"
 ZAGREB = ZoneInfo("Europe/Zagreb")
 REFERENCE_DATE = "2026-09-10"
 ARCHIVE_PATTERN = re.compile(r"\d{6,}-[a-f0-9]{16}")
@@ -194,8 +196,10 @@ def csv_bytes(data):
     return stream.getvalue().encode("utf-8")
 
 
-def html_fragment(data):
+def html_fragment(data, *, heading_level=2):
     _validate(data, preview=True)
+    if heading_level not in {2, 3}:
+        raise PriceError("Tablice podržavaju razinu naslova 2 ili 3.")
     categories = OrderedDict()
     for item in data["items"]:
         categories.setdefault(item["category_id"], []).append(item)
@@ -203,7 +207,7 @@ def html_fragment(data):
     for category_id, items in categories.items():
         label = escape(items[0]["category"])
         lines.extend([f'<section class="price-category" id="category-{category_id}" aria-labelledby="heading-{category_id}">',
-                      f'<h2 id="heading-{category_id}">{label}</h2>',
+                      f'<h{heading_level} id="heading-{category_id}">{label}</h{heading_level}>',
                       f'<div class="price-table-scroll" role="region" aria-label="{label}" tabindex="0">',
                       '<table class="price-table">',
                       f'<caption>{label} — cijene u eurima</caption>',
@@ -234,6 +238,8 @@ def price_content(data, csv_href, archive_href, *, preview=False, archived=False
     elif preview:
         intro += '<p class="price-meta">Datum početka primjene još nije potvrđen.</p>'
     intro += '<p>Sve cijene su u eurima. Uz aktualnu je prikazana bazna cijena na dan 10.09.2026.</p></div>'
+    if not archived and not preview:
+        intro += '<p>Planirate posvjetljivanje? <a href="../usluge/balayage-i-pramenovi/">Usporedite balayage i pramenove</a> prije dogovora termina.</p>'
     download_name = "cjenik-preview.csv" if preview else csv_filename(data)
     intro += f'<nav class="price-downloads" aria-label="Preuzimanje cjenika"><a href="{escape(csv_href, quote=True)}" download="{download_name}">Preuzmite {"radni " if preview else ""}CSV</a>'
     if not preview and csv_href == "cjenik.csv":
@@ -249,17 +255,94 @@ def price_content(data, csv_href, archive_href, *, preview=False, archived=False
     return intro + html_fragment(data)
 
 
-def html_page(title, content, root_prefix):
+def html_page(title, content, root_prefix, *, canonical_path="/cjenik/", description=None):
+    description = description or "Cjenik Salona Nina u Svetom Ivanu Zelini: šišanje, bojanje, balayage i pramenovi. Aktualne i bazne cijene te CSV za preuzimanje."
+    canonical = SITE_URL + canonical_path
     template = PROJECT_ROOT / "templates" / "price-page.html"
     if template.exists():
         source = template.read_text(encoding="utf-8")
         for token in ("{{TITLE}}", "{{ROOT}}", "{{CONTENT}}"):
             if token not in source:
                 raise PriceError(f"Predlošku nedostaje {token}.")
-        return source.replace("{{TITLE}}", escape(title)).replace("{{ROOT}}", escape(root_prefix, quote=True)).replace("{{CONTENT}}", content).encode("utf-8")
+        return (source.replace("{{TITLE}}", escape(title)).replace("{{ROOT}}", escape(root_prefix, quote=True))
+                .replace("{{DESCRIPTION}}", escape(description, quote=True)).replace("{{CANONICAL}}", escape(canonical, quote=True))
+                .replace("{{CONTENT}}", content)).encode("utf-8")
     return (f'<!doctype html><html lang="hr"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width, initial-scale=1">'
-            f'<title>{escape(title)}</title></head><body><main>{content}</main></body></html>\n').encode("utf-8")
+            f'<title>{escape(title)}</title><meta name="description" content="{escape(description, quote=True)}">'
+            f'<link rel="canonical" href="{escape(canonical, quote=True)}"></head><body><main>{content}</main></body></html>\n').encode("utf-8")
+
+
+def service_price_data(data):
+    """Select current service variants by their names; never keep a second set of prices."""
+    groups = (
+        ("balayage", "Balayage", lambda name: name.startswith("balayage ")),
+        ("pramenovi", "Pramenovi", lambda name: name.startswith("pramenovi ") and not name.startswith("pramenovi izrast ")),
+        ("pramenovi-izrast", "Obnova pramenova na izrastu", lambda name: name.startswith("pramenovi izrast ")),
+        ("boja-i-pramenovi", "Bojanje kose + pramenovi", lambda name: name.startswith("bojanje kose + pramenovi ")),
+    )
+    selected = []
+    for category_id, category, matches in groups:
+        selected.extend({**item, "category_id": category_id, "category": category}
+                        for item in data["items"] if matches(normalize(item["name"])))
+    return {**data, "items": selected}
+
+
+def service_price_answer(data):
+    """A visible answer from the exact long-hair row, including active sale semantics."""
+    matching = [item for item in data["items"]
+                if " ".join(normalize(item["name"]).split()) in {"balayage duga", "balayage duga kosa"}]
+    if len(matching) != 1:
+        return ""
+    item = matching[0]
+    promotion = item["promotion"]
+    detail = (f'<p class="service-quick-promotion">{escape(promotion["name"])}. '
+              f'Redovna cijena: {amount(item["current_price_cents"], ",")} €.</p>') if promotion else ""
+    return ('<aside class="service-quick-price" aria-labelledby="long-hair-price">'
+            '<h2 id="long-hair-price">Koliko košta balayage za dugu kosu?</h2>'
+            '<dl><div><dt>Aktualna cijena</dt>'
+            f'<dd><strong>{amount(active_price(item), ",")} €</strong></dd></div>'
+            f'<div><dt>Cijena na {human_date(item["reference_date"])}.</dt>'
+            f'<dd><strong>{amount(item["reference_price_cents"], ",")} €</strong></dd></div></dl>'
+            + detail + '</aside>')
+
+
+def service_page(data):
+    """Render the service page from the same confirmed dataset as HTML and CSV prices."""
+    validate(data)
+    template = PROJECT_ROOT / "templates" / "service-page.html"
+    if not template.exists():
+        raise PriceError("Nedostaje obvezni predložak templates/service-page.html; izgradnja je zaustavljena.")
+    service_data = service_price_data(data)
+    prices = (html_fragment(service_data, heading_level=3) if service_data["items"] else
+              '<p>Ove usluge trenutačno nisu navedene u objavljenom cjeniku. Za aktualnu ponudu nazovite salon.</p>')
+    title = "Balayage i pramenovi u Svetom Ivanu Zelini"
+    description = "Balayage i pramenovi u Salonu Nina u Svetom Ivanu Zelini. Usporedite tehnike, pogledajte aktualne i bazne cijene te nazovite za termin."
+    url = SITE_URL + SERVICE_PATH
+    provider = {"@type": "HairSalon", "@id": SITE_URL + "/#salon", "name": "Frizerski salon Nina", "url": SITE_URL + "/",
+                "telephone": "+385915798154", "address": {"@type": "PostalAddress",
+                "streetAddress": data["outlet"]["address"], "addressLocality": data["outlet"]["city"], "addressCountry": "HR"}}
+    structured = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebPage", "@id": url, "url": url, "name": title + " · Salon Nina",
+         "description": description, "inLanguage": "hr-HR", "about": {"@id": url + "#usluga"},
+         "breadcrumb": {"@id": url + "#putanja"}},
+        {"@type": "Service", "@id": url + "#usluga", "name": "Balayage i pramenovi",
+         "serviceType": "Bojanje i posvjetljivanje kose", "url": url, "provider": provider,
+         "areaServed": {"@type": "City", "name": data["outlet"]["city"]},
+         "image": SITE_URL + "/img/social/kosa-posvjetljivanje.jpg"},
+        {"@type": "BreadcrumbList", "@id": url + "#putanja", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Salon Nina", "item": SITE_URL + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Balayage i pramenovi", "item": url}]}]}
+    replacements = {"TITLE": escape(title), "DESCRIPTION": escape(description, quote=True),
+                    "CANONICAL": url, "EFFECTIVE_DATE": human_date(data["effective_date"]),
+                    "EFFECTIVE_DATE_ISO": data["effective_date"], "PRICES": prices,
+                    "PRICE_ANSWER": service_price_answer(data),
+                    "STRUCTURED_DATA": json.dumps(structured, ensure_ascii=False, indent=2).replace("<", "\\u003c")}
+    source = template.read_text(encoding="utf-8")
+    for key in replacements:
+        if "{{" + key + "}}" not in source:
+            raise PriceError(f"Predlošku usluge nedostaje {{{{{key}}}}}.")
+    return re.sub(r"\{\{([A-Z_]+)\}\}", lambda match: replacements[match[1]], source).encode("utf-8")
 
 
 def json_bytes(data):
@@ -282,6 +365,8 @@ def csv_filename(data):
 
 
 def atomic_write(path, content):
+    if path.exists() and path.read_bytes() == content:
+        return
     with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as handle:
         temporary = Path(handle.name)
         try:
@@ -367,9 +452,16 @@ def build(data, output, *, now=None):
         raise PriceError("Imenovani CSV već postoji s drukčijim sadržajem.")
     fragment = html_fragment(data).encode("utf-8")
     # Prepare templates before any mutation; a broken template cannot leave a partial release.
-    current_page = html_page("Cjenik usluga", price_content(data, "cjenik.csv", "arhiva/"), "../")
+    current_page = html_page("Cjenik frizerskih usluga u Svetom Ivanu Zelini", price_content(data, "cjenik.csv", "arhiva/"), "../")
+    current_service_page = service_page(data)
+    archive_date = human_date(data["effective_date"])
+    publication_label = published.astimezone(ZAGREB).strftime("%d.%m.%Y u %H:%M")
+    archived_description = (f"Arhivski cjenik Salona Nina u Svetom Ivanu Zelini, izdanje {data['publication_sequence']}. "
+                            f"Primjena od {archive_date}; objava {publication_label}. Povijesne cijene usluga i CSV.")
     snapshot = {filename: csv_content, "cjenik.json": canonical, "cjenik-fragment.html": fragment,
-                "index.html": html_page("Arhivski cjenik", price_content(data, filename, "../", archived=True), "../../../")}
+                "index.html": html_page(f"Cjenik od {archive_date}, izdanje {data['publication_sequence']} · Sveti Ivan Zelina",
+                                        price_content(data, filename, "../", archived=True), "../../../",
+                                        canonical_path=f"/cjenik/arhiva/{version}/", description=archived_description)}
     manifest = {"schema_version": 2, "status": "prepared", "deployment_verified": False,
                 "filename": filename, "sha256": sha256(csv_content), "publication_sequence": data["publication_sequence"],
                 "published_at": data["published_at"], "effective_date": data["effective_date"],
@@ -386,7 +478,8 @@ def build(data, output, *, now=None):
         label = f"Od {human_date(record['effective_date'])} · {shown_time}"
         list_items.append(f'<li><a href="{directory.name}/">{escape(label)}</a> '
                           f'(<a href="{directory.name}/{record["filename"]}" download>CSV</a>)</li>')
-    archive_page = html_page("Arhiva cjenika", '<h1>Arhiva cjenika</h1><p><a href="../">Aktualni cjenik</a></p><ul>' + "".join(list_items) + "</ul>", "../../")
+    archive_page = html_page("Arhiva cjenika · Sveti Ivan Zelina", '<h1>Arhiva cjenika</h1><p><a href="../">Aktualni cjenik</a></p><ul>' + "".join(list_items) + "</ul>", "../../",
+                             canonical_path="/cjenik/arhiva/", description="Arhiva cjenika Salona Nina u Svetom Ivanu Zelini. Prethodna izdanja, datumi primjene i izvorni CSV zapisi cijena usluga.")
     if is_new:
         archive.mkdir(parents=True, exist_ok=True)
         staging = Path(tempfile.mkdtemp(prefix=".staging-", dir=archive))
@@ -405,6 +498,9 @@ def build(data, output, *, now=None):
     atomic_write(output / "cjenik-fragment.html", fragment)
     atomic_write(output / "index.html", current_page)
     atomic_write(output / "manifest.json", json_bytes(manifest))
+    service_output = output.parent / SERVICE_PATH.strip("/") / "index.html"
+    service_output.parent.mkdir(parents=True, exist_ok=True)
+    atomic_write(service_output, current_service_page)
     return destination
 
 

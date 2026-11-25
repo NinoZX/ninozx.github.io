@@ -26,7 +26,7 @@ Otvoriti `http://127.0.0.1:4173/` i `/cjenik/`. Poslužitelj se zaustavlja s Ctr
 - `data/prices.json` — potvrđen izvor aktualnih i baznih cijena, nazivi, kategorije i podaci objave.
 - `data/source-audit.json` — SHA-256 izvora, usporedba PDF-a i CSV-a, korekcije naziva i podrijetlo poslovnih podataka.
 - `scripts/import_neosalon.py` — strogo ograničen uvoz poznatog NeoSalon izvoza.
-- `scripts/build_prices.py`, `templates/price-page.html` — generiranje cjenika i nepromjenjive arhive.
+- `scripts/build_prices.py` generira cjenik, arhivu i cijene na [stranici o balayageu i pramenovima](https://salon-nina.hr/usluge/balayage-i-pramenovi/). Tekst uslužne stranice uređuje se u `templates/service-page.html`, a cijene u `data/prices.json`.
 - `cjenik/` — objavljeni HTML, stabilni CSV, imenovane CSV kopije i arhiva.
 - [Cjenik](docs/CJENIK.md) — izvori, uvoz, priprema objave i održavanje.
 - [Vizuali](docs/VIZUALI.md) i [pregled obnove](docs/OBNOVA.md) — podrijetlo fotografija i sadržajne odluke.
