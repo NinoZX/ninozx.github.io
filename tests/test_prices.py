@@ -6,6 +6,7 @@ from datetime import datetime
 import io
 import json
 from pathlib import Path
+import shutil
 import sys
 import tempfile
 import unittest
@@ -281,12 +282,95 @@ class PricePublicationTests(unittest.TestCase):
         (template_root / "templates").mkdir(parents=True)
         template = template_root / "templates" / "price-page.html"
         template.write_text('<title>{{TITLE}}</title><a href="{{ROOT}}">Salon</a><main>{{CONTENT}}</main>', encoding="utf-8")
+        shutil.copyfile(ROOT / "templates/service-page.html", template_root / "templates/service-page.html")
         with patch.object(prices, "PROJECT_ROOT", template_root):
             archive = self.build(confirmed_data())
         self.assertIn('href="../"', (self.output / "index.html").read_text(encoding="utf-8"))
         self.assertIn('href="../../"', (self.output / "arhiva" / "index.html").read_text(encoding="utf-8"))
         self.assertIn('href="../../../"', (archive / "index.html").read_text(encoding="utf-8"))
         self.assertNotIn("{{", (self.output / "index.html").read_text(encoding="utf-8"))
+
+    def test_service_prices_follow_new_release_without_changing_previous_archive(self):
+        data = confirmed_data()
+        service = copy.deepcopy(data["items"][0])
+        service.update(id="test-balayage", name="Balayage kratka", source_name="BALAYAGE KRATKA",
+                       category="Bojanje", category_id="bojanje", current_price_cents=4567,
+                       reference_price_cents=4321)
+        data["items"].append(service)
+        first_archive = self.build(data)
+        before = directory_bytes(first_archive)
+        service_path = self.output.parent / "usluge/balayage-i-pramenovi/index.html"
+        first_page = service_path.read_text(encoding="utf-8")
+        self.assertIn("Balayage kratka", first_page)
+        self.assertIn('class="price-current"><strong>45,67 €</strong>', first_page)
+        self.assertIn('class="price-reference"><strong>43,21 €</strong>', first_page)
+        self.assertNotIn('scope="row">Šišanje, kratka kosa', first_page)
+        self.assertIn('href="https://salon-nina.hr/usluge/balayage-i-pramenovi/"', first_page)
+        self.assertIn("Blago posvjetljivanje kose — stvarni rad Salona Nina.", first_page)
+        data.update(publication_sequence=2, published_at="2026-11-23T10:45:00+01:00")
+        data["items"][-1]["current_price_cents"] = 5000
+        data["items"][-1]["promotion"] = {"name": "Akcijska prodaja", "price_cents": 4799}
+        second_archive = self.build(data)
+        updated_page = service_path.read_text(encoding="utf-8")
+        self.assertIn('class="price-current"><strong>47,99 €</strong>', updated_page)
+        self.assertIn('class="price-reference"><strong>43,21 €</strong>', updated_page)
+        self.assertIn("redovna cijena 50,00 €", updated_page)
+        self.assertNotIn("45,67 €", updated_page)
+        self.assertEqual(directory_bytes(first_archive), before)
+        archive_html = (second_archive / "index.html").read_text(encoding="utf-8")
+        self.assertIn(f'href="https://salon-nina.hr/cjenik/arhiva/{second_archive.name}/"', archive_html)
+        self.assertIn("izdanje 2", archive_html)
+        self.assertIn("objava 23.11.2026 u 10:45", archive_html)
+
+    def test_template_refresh_updates_current_pages_but_preserves_price_artifacts(self):
+        template_root = Path(self.temporary.name) / "template-project"
+        shutil.copytree(ROOT / "templates", template_root / "templates")
+        data = confirmed_data()
+        data["items"][0].update(name="Pramenovi kratka", source_name="PRAMENOVI KRATKA")
+        with patch.object(prices, "PROJECT_ROOT", template_root):
+            archive = self.build(data)
+            protected = {path: (path.read_bytes(), path.stat().st_mtime_ns)
+                         for path in self.output.rglob("*") if path.is_file() and
+                         (archive in path.parents or path.suffix == ".csv" or path.name == "manifest.json")}
+            template = template_root / "templates/service-page.html"
+            template.write_text(template.read_text(encoding="utf-8").replace("Od nježnijeg prijelaza boje", "Nova poruka za posjetitelje."), encoding="utf-8")
+            self.build(data)
+        service_path = self.output.parent / "usluge/balayage-i-pramenovi/index.html"
+        self.assertIn("Nova poruka za posjetitelje.", service_path.read_text(encoding="utf-8"))
+        self.assertEqual({path: (path.read_bytes(), path.stat().st_mtime_ns) for path in protected}, protected)
+        current = (self.output / "index.html").read_text(encoding="utf-8")
+        listing = (self.output / "arhiva/index.html").read_text(encoding="utf-8")
+        self.assertIn('href="https://salon-nina.hr/cjenik/"', current)
+        self.assertIn('href="https://salon-nina.hr/cjenik/arhiva/"', listing)
+        self.assertIn("Cjenik frizerskih usluga u Svetom Ivanu Zelini", current)
+        self.assertIn("Arhiva cjenika · Sveti Ivan Zelina", listing)
+
+    def test_long_hair_answer_uses_current_reference_and_promotion_from_one_row(self):
+        data = confirmed_data()
+        self.assertEqual(prices.service_price_answer(data), "")
+        item = data["items"][0]
+        item.update(name="Balayage duga", current_price_cents=6012, reference_price_cents=5099)
+        answer = prices.service_price_answer(data)
+        self.assertIn("Koliko košta balayage za dugu kosu?", answer)
+        self.assertIn('<dd><strong>60,12 €</strong></dd>', answer)
+        self.assertIn('<dd><strong>50,99 €</strong></dd>', answer)
+        item["promotion"] = {"name": "Akcija & njega", "price_cents": 5501}
+        answer = prices.service_price_answer(data)
+        self.assertIn('<dd><strong>55,01 €</strong></dd>', answer)
+        self.assertIn('<dd><strong>50,99 €</strong></dd>', answer)
+        self.assertIn("Akcija &amp; njega. Redovna cijena: 60,12 €", answer)
+        self.assertNotIn("<del", answer)
+        page = prices.service_page(data).decode("utf-8")
+        self.assertLess(page.index("Koliko košta balayage za dugu kosu?"), page.index('<table class="price-table">'))
+        self.assertIn('"name": "Frizerski salon Nina"', page)
+
+    def test_missing_service_template_blocks_production_build_before_any_write(self):
+        template_root = Path(self.temporary.name) / "incomplete-project"
+        template_root.mkdir()
+        with patch.object(prices, "PROJECT_ROOT", template_root):
+            with self.assertRaisesRegex(prices.PriceError, "obvezni predložak"):
+                self.build(confirmed_data())
+        self.assertFalse(self.output.exists())
 
 
 if __name__ == "__main__":

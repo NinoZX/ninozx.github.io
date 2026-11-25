@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{TITLE}} · Salon Nina</title>
+    <meta name="description" content="{{DESCRIPTION}}" />
+    <meta name="theme-color" content="#f6f3ed" />
+    <link rel="canonical" href="{{CANONICAL}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="hr_HR" />
+    <meta property="og:title" content="{{TITLE}} · Salon Nina" />
+    <meta property="og:description" content="{{DESCRIPTION}}" />
+    <meta property="og:url" content="{{CANONICAL}}" />
+    <meta property="og:image" content="https://salon-nina.hr/img/social/kosa-posvjetljivanje.jpg" />
+    <meta property="og:image:alt" content="Blago posvjetljivanje duge smeđe kose, rad Salona Nina." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="../../img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../css/salon.css?v=20261125" />
+    <link rel="stylesheet" href="../../css/cjenik.css?v=20261123" />
+    <link rel="stylesheet" href="../../css/usluga.css?v=20261125" />
+    <script type="application/ld+json">{{STRUCTURED_DATA}}</script>
+  </head>
+  <body class="service-page">
+    <a class="skip-link" href="#main">Preskočite na sadržaj</a>
+    <header class="service-header wrap">
+      <a class="wordmark" href="../../" aria-label="Salon Nina — naslovnica">
+        <img src="../../img/Nina.png" alt="Nina" width="330" height="130" />
+        <span>FRIZERSKI SALON</span>
+      </a>
+      <nav aria-label="Glavna navigacija">
+        <a href="../../">Salon</a>
+        <a href="../../cjenik/">Cjenik</a>
+        <a class="service-header-call" href="tel:+385915798154">091 579 8154 ↗</a>
+      </nav>
+    </header>
+    <main id="main">
+      <div class="wrap">
+        <nav class="service-breadcrumb" aria-label="Putanja stranice">
+          <a href="../../">Salon Nina</a><span aria-hidden="true">/</span><span aria-current="page">Balayage i pramenovi</span>
+        </nav>
+        <section class="service-hero" aria-labelledby="service-title">
+          <div class="service-hero-copy">
+            <h1 id="service-title">Balayage<br />i pramenovi<span>u Svetom Ivanu Zelini</span></h1>
+            <p class="service-intro">Od nježnijeg prijelaza boje do izraženijih pramenova: odabir prilagođavamo vašoj kosi i željenom rezultatu.</p>
+            {{PRICE_ANSWER}}
+            <div class="service-actions">
+              <a class="button" href="tel:+385915798154">Nazovite za termin <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#cijene">Pogledajte cijene <span aria-hidden="true">↓</span></a>
+            </div>
+            <p class="service-location">S vama od 2002. · Trg Ante Starčevića 5</p>
+          </div>
+          <figure class="service-hero-photo">
+            <img src="../../img/social/kosa-posvjetljivanje.jpg" alt="Duga smeđa kosa s nježnim svjetlijim pramenovima, fotografirana u Salonu Nina." width="960" height="1280" fetchpriority="high" />
+            <figcaption>Blago posvjetljivanje kose — stvarni rad Salona Nina.</figcaption>
+          </figure>
+        </section>
+        <section class="service-section service-prices" id="cijene" aria-labelledby="prices-title">
+          <div class="service-section-heading">
+            <h2 id="prices-title">Cijene balayagea<br />i pramenova</h2>
+            <p>Cijene prema duljini kose, iz cjenika koji vrijedi od <time datetime="{{EFFECTIVE_DATE_ISO}}">{{EFFECTIVE_DATE}}</time>. Uz aktualnu cijenu navedena je i bazna cijena na dan 10.09.2026. Svi iznosi su u eurima.</p>
+          </div>
+          {{PRICES}}
+          <a class="text-link" href="../../cjenik/">Pogledajte cijeli cjenik <span aria-hidden="true">↗</span></a>
+        </section>
+        <section class="service-section service-comparison" aria-labelledby="comparison-title">
+          <div class="service-section-heading">
+            <h2 id="comparison-title">Balayage ili pramenovi?</h2>
+          </div>
+          <div class="service-comparison-grid">
+            <article>
+              <h3>Za mekši prijelaz boje</h3>
+              <p>Balayage se nanosi slobodnije, s naglaskom na postupnom prijelazu prema svjetlijim dužinama. Razmotrite ga ako želite manje izraženu granicu izrasta. Nijansa i intenzitet prilagođavaju se početnoj boji kose.</p>
+            </article>
+            <article>
+              <h3>Za precizniji raspored svjetline</h3>
+              <p>Pramenovi posvjetljuju odabrane dijelove kose, često uz pomoć folije. Širinom, gustoćom i položajem može se naglasiti područje uz lice, posvijetliti cijela frizura ili obnoviti postojeći izrast.</p>
+            </article>
+          </div>
+          <p class="service-note">Za dogovor ne morate poznavati nazive tehnika. Fotografija željenog izgleda, duljina kose i informacije o prethodnim bojanjima pomažu nam odabrati odgovarajući postupak.</p>
+        </section>
+        <section class="service-section service-faq" aria-labelledby="faq-title">
+          <div class="service-section-heading"><h2 id="faq-title">Prije termina</h2></div>
+          <div class="service-faq-list">
+            <details><summary>Što uključuju navedene cijene?</summary><p>Prikazane su pojedinačne stavke balayagea i pramenova iz objavljenog cjenika. Šišanje, oblikovanje i paketi navedeni su u <a href="../../cjenik/">cijelom cjeniku</a>. Pri naručivanju potvrdite koje usluge želite i njihov ukupan iznos.</p></details>
+            <details><summary>Koliko traje termin?</summary><p>Trajanje ovisi o duljini i gustoći kose, prethodnim bojanjima te željenoj promjeni. Pri pozivu opišite svoju kosu i dogovorite vrijeme potrebno za odabrane usluge.</p></details>
+            <details><summary>Kako dogovoriti dolazak?</summary><p>Nazovite <a href="tel:+385915798154">091 579 8154</a>. Salon je na Trgu Ante Starčevića 5 u Svetom Ivanu Zelini. Fotografiju željene boje možete ponijeti na dogovoreni termin.</p></details>
+          </div>
+        </section>
+      </div>
+      <section class="service-contact" aria-labelledby="contact-title">
+        <div class="wrap service-contact-inner">
+          <div><h2 id="contact-title">Dogovorite termin.</h2></div>
+          <div class="service-contact-details">
+            <a class="service-phone" href="tel:+385915798154">091 579 8154 ↗</a>
+            <p>Trg Ante Starčevića 5<br />Sveti Ivan Zelina</p>
+            <p>Pon – pet: 8:00 – 20:00<br />Subota: 8:00 – 14:00</p>
+            <a class="text-link" href="../../#contact">Kontakt i dolazak <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="service-footer wrap"><a href="../../">Salon Nina · od 2002.</a><a href="../../cjenik/">Sve usluge i cijene</a></footer>
+  </body>
+</html>
